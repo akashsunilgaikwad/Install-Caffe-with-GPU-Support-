@@ -72,5 +72,5 @@ make -j 8 all py
 
 make -j 8 test
 make runtest
-
+#Include your own path 
 echo "export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH" >> ~/.bashrc
