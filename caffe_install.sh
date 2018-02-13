@@ -5,6 +5,7 @@ if [ "$USE_CUDNN" != "0" ]; then
       curl -o /tmp/${CUDNN_TAR_FILE} http://developer.download.nvidia.com/compute/redist/cudnn/v6.0/${CUDNN_TAR_FILE}
   fi
 fi
+# you may require to download the cuDnn from above Nvidia Website manually because it equires registration.  
 
 # Add Nvidia's cuda repository
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
@@ -72,4 +73,4 @@ make -j 8 all py
 make -j 8 test
 make runtest
 
-echo "export PYTHONPATH=/opt/cat-dogs/repo/caffe/python:$PYTHONPATH" >> ~/.bashrc
+echo "export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH" >> ~/.bashrc
